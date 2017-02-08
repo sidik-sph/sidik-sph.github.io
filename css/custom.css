@@ -132,6 +132,10 @@ hr{
   #kontak_img{
     margin-top: 15px;
   }
+  
+  #kirim{
+   margin-bottom: 5px; 
+  }
 
   hr{
     width: 80%;
