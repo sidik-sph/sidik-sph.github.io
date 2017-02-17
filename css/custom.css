@@ -61,11 +61,9 @@
 
 #beranda h1, #beranda h3{
   color: #337AB7;
+  font-family: inherit;
 }
 
-#beranda h2{
-  font-family: digital;
-}
 
 /*------------AKHIR BERANDA----------------------*/
 
