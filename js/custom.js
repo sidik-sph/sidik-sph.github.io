@@ -18,38 +18,51 @@ $(document).ready(function(){
     window.location.hash = hash;
         });
       });
-  })
+
 
   // VALIDASI FORM
 
-  function validasi(){
-nama = document.getElementById('nama').value,
-        email= document.getElementById('email').value,
-        pesan= document.getElementById('pesan').value;
+    $('#kirim').click(function(event){
+      if($('#nama,#pesan,#email').val() == ""){
+        event.preventDefault();
+        $('#nama').addClass('validasi').attr('placeholder','Nama Masih Kosong');
+        $('#email').addClass('validasi').attr('placeholder','Email Masih Kosong');
+        $('#pesan').addClass('validasi').attr('placeholder','Pesan Masih Kosong');
+        $('#nama,#email,#pesan').click(function(){
+          $(this).removeClass('validasi').attr('placeholder','');
+        });
+      }else if($('#nama').val() == ""){
+        $('#nama').addClass('validasi').attr('placeholder','Nama Masih Kosong');
+        event.preventDefault();
+        $('#nama').click(function(){
+          $('#nama').removeClass('validasi').attr('placeholder','');
+        });
+      }else if($('#email').val() == ""){
+        $('#email').addClass('validasi').attr('placeholder','Email Masih Kosong');
+        event.preventDefault();
+        $('#email').click(function(){
+          $('#email').removeClass('validasi').attr('placeholder','');
+        });
+      }else if($('#pesan').val() == ""){
+        $('#pesan').addClass('validasi').attr('placeholder','Pesan Masih Kosong');
+        event.preventDefault();
+        $('#pesan').click(function(){
+          $('#pesan').removeClass('validasi').attr('placeholder','');
+        });
+      }else{
+        $('#nama,#email,#pesan').val("").removeClass('validasi').attr('placeholder','');
+        return true;
+      }
 
-        if(nama == "" || nama == null){
-          peringatan("Nama masih kosong !");
-          return false;
-        }else if(email == "" || email == null){
-          peringatan("Email Masih Kosong");
-          return false;
-        }else if(pesan == "" || pesan == null){
-          peringatan("Pesan Masih Kosong");
-          return false;
-        }else{
-          return true;
-        }
-  }
+    });
 
-  function peringatan(isi){
-    peringatan = document.getElementById('peringatan');
-    var isiperingatan = document.getElementById('isiperingatan');
-    peringatan.style.display = "block";
-    isiperingatan.innerHTML = isi;
-  }
 
-  function klik(){
-    peringatan.style.display = "none";
-  }
-  var tutup = document.getElementById('tutup');
-  tutup.onclick = klik;
+
+    $('#batal').click(function(){
+      $('#nama,#email,#pesan').removeClass('validasi').attr('placeholder','');
+    });
+
+    $('label').css('color','#296496');
+
+
+  })
