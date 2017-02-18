@@ -45,6 +45,14 @@
   font-family: digital;
 }
 
+#menu li{
+  border-right: 0.5px solid #296da7;
+}
+
+#menu li:last-child{
+  border: none;
+}
+
 /*-----------BERANDA------------------------*/
 
 #beranda{
@@ -62,6 +70,17 @@
 #beranda h1, #beranda h3{
   color: #337AB7;
   font-family: inherit;
+}
+
+@media screen and (max-width:768px){
+  #beranda h3{
+    font-size: 1.25em;
+    margin-bottom: 30px;
+  }
+
+  #beranda h1{
+    font-size: 1.8em;
+  }
 }
 
 
@@ -128,6 +147,7 @@ hr{
 #kontak{
   min-height: 600px;
   padding: 15px 0;
+  background-color: rgb(236, 240, 241);
 }
 
 #kontak_img{
@@ -205,3 +225,34 @@ footer ul li a:hover{
   }
 }
 /*----------------------------END FOOTER--------------------------*/
+  .slideanim{
+    visibility:hidden;
+  }
+
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
