@@ -46,10 +46,13 @@
 
     <!-- BERANDA -->
       <section id="beranda" class="text-center">
-        <img src="img/profil.png" class="img-circle" alt="foto-saya">
+        <img src="img/profil.png" id="poto" class="img-circle" alt="foto-saya">
         <h1>SIDIK PRAMBUDI HARJA</h1>
         <h3>WEB DEVELOPER | MAHASISWA <i class="glyphicon glyphicon-education"></i></h3>
-        <a href="#portofolio" class="btn btn-primary btn-lg" id="portofolioa">Cek Portofolio <i class="glyphicon glyphicon-search"></i> </a>
+        <div id="tombol2">
+          <button id="sensor" class="btn btn-lg btn-danger">Sensor Wajah</button>
+          <a href="#portofolio" class="btn btn-primary btn-lg" id="portofolioa">Cek Portofolio <i class="glyphicon glyphicon-search"></i> </a>
+        </div>
       </section>
     <!-- END BERANDA -->
 
@@ -199,19 +202,19 @@
           <div class="col-sm-6">
           <!-- FORM -->
             <form class="form-horizontal" action="mailto:sidikph58@gmail.com" method="post" enctype="text/plain">
-              <div class="form-group">
+              <div class="form-group slideanim">
                 <label for="nama" class="col-sm-2 control-label">Nama</label>
                 <div class="col-sm-10">
                   <input type="text" class="form-control" id="nama">
                 </div>
               </div>
-              <div class="form-group">
+              <div class="form-group slideanim">
                 <label for="email" class="control-label col-sm-2">Email</label>
                 <div class="col-sm-10">
                   <input type="email" id="email" class="form-control">
                 </div>
               </div>
-              <div class="form-group">
+              <div class="form-group slideanim">
                 <label for="pesan" class="col-sm-2 control-label">Pesan</label>
                 <div class="col-sm-10">
                   <textarea id="pesan" rows="10" class="form-control"></textarea>
@@ -243,7 +246,7 @@
   <!-- FOOTER -->
       <footer>
       <div class="container">
-        <div class="row">
+        <div class="row munculanim">
           <div class="col-md-9">
             <h3><i class="glyphicon glyphicon-user"></i>Sidik-SPH</h3>
             <span style="font-weight: bold;">WEB DEVELOPER | MAHASISWA .
