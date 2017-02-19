@@ -12,12 +12,13 @@ $(document).ready(function(){
   // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
   $('html, body').animate({
     scrollTop: $(hash).offset().top - 50
-  }, 900,'easeInOutExpo', function(){
+    }, 900,'easeInOutExpo', function(){
 
     // Add hash (#) to URL when done scrolling (default click behavior)
     window.location.hash = hash;
         });
-      });
+
+      }); // END CLICK
 
 
   // VALIDASI FORM
@@ -73,6 +74,29 @@ $(document).ready(function(){
             $(this).addClass("slide");
           }
       });
+    }); //END SCROLL
+
+    $(window).scroll(function() {
+    $(".munculanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 700) {
+          $(this).addClass("muncul");
+        }
     });
+  }); //END SCROLL
+
+  $('#sensor').click(function(){
+    // $("#poto").attr("src","img/sensor.png");
+    if($("#poto").attr("src") === "img/profil.png"){
+      $("#poto").attr("src","img/sensor.png");
+      $(this).text("Lulus Sensor")
+    }else{
+      $("#poto").attr("src","img/profil.png");
+      $(this).text("Sensor Wajah");
+
+    }
+  })
 
   })
