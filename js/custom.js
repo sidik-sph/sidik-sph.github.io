@@ -77,26 +77,33 @@ $(document).ready(function(){
     }); //END SCROLL
 
     $(window).scroll(function() {
-    $(".munculanim").each(function(){
-      var pos = $(this).offset().top;
+      $(".munculanim").each(function(){
+        var pos = $(this).offset().top;
 
-      var winTop = $(window).scrollTop();
-        if (pos < winTop + 700) {
-          $(this).addClass("muncul");
-        }
+        var winTop = $(window).scrollTop();
+          if (pos < winTop + 700) {
+            $(this).addClass("muncul");
+          }
+      });
+    }); //END SCROLL
+
+    $('#sensor').click(function(){
+      // $("#poto").attr("src","img/sensor.png");
+      if($("#poto").attr("src") === "img/profil.png"){
+        $("#poto").attr("src","img/sensor.png");
+        $(this).text("Lulus Sensor")
+      }else{
+        $("#poto").attr("src","img/profil.png");
+        $(this).text("Sensor Wajah");
+      }
+    }) //END Sensor
+
+    $("#portofolio .thumbnail").mouseenter(function(){
+      $(this).addClass("port").css("borderColor","#3aa1f9");
     });
-  }); //END SCROLL
 
-  $('#sensor').click(function(){
-    // $("#poto").attr("src","img/sensor.png");
-    if($("#poto").attr("src") === "img/profil.png"){
-      $("#poto").attr("src","img/sensor.png");
-      $(this).text("Lulus Sensor")
-    }else{
-      $("#poto").attr("src","img/profil.png");
-      $(this).text("Sensor Wajah");
-
-    }
-  })
+    $("#portofolio .thumbnail").mouseleave(function(){
+      $(this).removeClass("port").css("borderColor","#337AB7");
+    })
 
   })

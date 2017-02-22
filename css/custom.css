@@ -11,7 +11,7 @@
 }
 
 .navbar-default .navbar-nav>li>a{
-  transition: all 1s ease;
+  transition: all 0.25s ease-in-out;
 }
 
 .navbar-default .navbar-nav>li>a:hover{
@@ -95,7 +95,8 @@
 
 #portofolio h2{
   text-align: center;
-  color: #337AB7;
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em darkblue;
 }
 
 hr{
@@ -105,6 +106,7 @@ hr{
 
 .thumbnail{
   border: 5px solid #337AB7;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #portofolio img{
@@ -115,6 +117,99 @@ hr{
 .modal-header{
   background-color: #337AB7;
   color: white;
+}
+
+.port{
+  animation-name: bounce;
+  -webkit-animation-name: bounce;
+  -moz-animation-name: bounce;
+  -ms-animation-name: bounce;
+  -o-animation-name: bounce;
+  animation-duration: 0.55s;
+  -webkit-animation-duration: 0.55s;
+  -moz-animation-duration: 0.55s;
+  -ms-animation-duration: 0.55s;
+  -o-animation-duration: 0.55s;
+  animation-timing-function: cubic-bezier(.42, 0, .58, 1);
+  -webkit-animation-timing-function: cubic-bezier(.42, 0, .58, 1);
+  -moz-animation-timing-function: cubic-bezier(.42, 0, .58, 1);
+  -ms-animation-timing-function: cubic-bezier(.42, 0, .58, 1);
+  -o-animation-timing-function: cubic-bezier(.42, 0, .58, 1);
+}
+
+@keyframes bounce{
+  0% {
+    transform: translate-Y(0);
+  }
+  50% {
+    transform: translateY(-30px);*/
+  }
+  70% {
+    transform: translateY(0);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+}
+
+@-webkit-keyframes bounce{
+  0% {
+    -webkit-transform: translate-Y(0);
+  }
+  50% {
+    -webkit-transform: translateY(-30px);*/
+  }
+  70% {
+    -webkit-transform: translateY(0);
+  }
+  90% {
+    -webkit-transform: translateY(-10px);
+  }
+}
+
+@-moz-keyframes bounce{
+  0% {
+    -moz-transform: translate-Y(0);
+  }
+  50% {
+    -moz-transform: translateY(-30px);*/
+  }
+  70% {
+    -moz-transform: translateY(0);
+  }
+  90% {
+    -moz-transform: translateY(-10px);
+  }
+}
+
+@-ms-keyframes bounce{
+  0% {
+    -ms-transform: translate-Y(0);
+  }
+  50% {
+    -ms-transform: translateY(-30px);*/
+  }
+  70% {
+    -ms-transform: translateY(0);
+  }
+  90% {
+    -ms-transform: translateY(-10px);
+  }
+}
+
+@-o-keyframes bounce{
+  0% {
+    -o-transform: translate-Y(0);
+  }
+  50% {
+    -o-transform: translateY(-30px);*/
+  }
+  70% {
+    -o-transform: translateY(0);
+  }
+  90% {
+    -o-transform: translateY(-10px);
+  }
 }
 
 /*---------------------------AKHIR PORTOFOLIO------------------------------*/
@@ -148,6 +243,12 @@ hr{
   min-height: 600px;
   padding: 15px 0;
   background-color: rgb(236, 240, 241);
+}
+
+#kontak h1{
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em darkblue;
+
 }
 
 #kontak_img{
@@ -243,11 +344,11 @@ footer ul li a:hover{
   @keyframes slide {
     0% {
       opacity: 0;
-      -webkit-transform: translateY(70%);
+      transform: translateY(70%);
     }
     100% {
       opacity: 1;
-      -webkit-transform: translateY(0%);
+      transform: translateY(0%);
     }
   }
   @-webkit-keyframes slide {
